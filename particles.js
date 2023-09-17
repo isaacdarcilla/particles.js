@@ -8,8 +8,9 @@
 /* ----------------------------------------------- */
 
 var pJS = function(tag_id, params){
+  var rootElement = tag_id instanceof HTMLElement ? tag_id : document.getElementById(tag_id)
 
-  var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
+  var canvas_el = rootElement.querySelector('.particles-js-canvas-el');
 
   /* particles.js variables with default values */
   this.pJS = {

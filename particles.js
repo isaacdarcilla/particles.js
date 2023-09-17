@@ -138,7 +138,7 @@ var pJS = function(tag_id, params){
 
   /* params settings */
   if(params){
-    Object.deepExtend(pJS, params);
+    deepExtend(pJS, params);
   }
 
   pJS.tmp.obj = {
@@ -1413,12 +1413,12 @@ var pJS = function(tag_id, params){
 
 /* ---------- global functions - vendors ------------ */
 
-Object.deepExtend = function(destination, source) {
+function deepExtend (destination, source) {
   for (var property in source) {
     if (source[property] && source[property].constructor &&
      source[property].constructor === Object) {
       destination[property] = destination[property] || {};
-      arguments.callee(destination[property], source[property]);
+      deepExtend(destination[property], source[property]);
     } else {
       destination[property] = source[property];
     }

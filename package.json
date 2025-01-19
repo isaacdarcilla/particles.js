@@ -1,5 +1,5 @@
 {
-  "name": "@westtrade/particles",
+  "name": "@doodl/particles",
   "version": "2.0.0",
   "description": "A lightweight JavaScript library for creating particles",
   "scripts": {
